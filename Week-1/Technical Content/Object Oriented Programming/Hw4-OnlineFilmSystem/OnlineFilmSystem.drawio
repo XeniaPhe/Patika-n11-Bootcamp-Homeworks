@@ -1,0 +1,157 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="890" dy="878" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--0" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="User" vertex="1">
+          <mxGeometry height="148" width="160" x="881" y="460" as="geometry">
+            <mxRectangle height="26" width="160" x="230" y="140" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--1" parent="zkfFHV4jXpPFQw0GAbJ--0" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value=" + id: UUID&#xa; + username: String&#xa; + email: String&#xa; + password: String&#xa; + filmsOwned: List&lt;Film&gt;" vertex="1">
+          <mxGeometry height="84" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--4" parent="zkfFHV4jXpPFQw0GAbJ--0" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--5" parent="zkfFHV4jXpPFQw0GAbJ--0" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value=" + isSubscribed(): boolean" vertex="1">
+          <mxGeometry height="22" width="160" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-15" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="dRSCHxVPpcA_aZxnoG64-20" style="endArrow=block;endSize=12;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="zkfFHV4jXpPFQw0GAbJ--0" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="677" y="690" as="sourcePoint" />
+            <mxPoint x="837" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-20" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="Subscriber" vertex="1">
+          <mxGeometry height="160" width="160" x="881" y="660" as="geometry">
+            <mxRectangle height="26" width="160" x="230" y="140" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-21" parent="dRSCHxVPpcA_aZxnoG64-20" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value=" + id: UUID&#xa; + username: String&#xa; + email: String&#xa; + password: String&#xa; + filmsOwned: List&lt;Film&gt;&#xa; + filmsRented: List&lt;Film&gt;" vertex="1">
+          <mxGeometry height="94" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-22" parent="dRSCHxVPpcA_aZxnoG64-20" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-23" parent="dRSCHxVPpcA_aZxnoG64-20" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value=" + isSubscribed(): boolean" vertex="1">
+          <mxGeometry height="22" width="160" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-28" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="Film" vertex="1">
+          <mxGeometry height="90" width="160" x="1441" y="460" as="geometry">
+            <mxRectangle height="26" width="160" x="230" y="140" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-29" parent="dRSCHxVPpcA_aZxnoG64-28" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value=" + id: UUID&#xa; + name: String&#xa; + price: double&#xa; + rentFee: double" vertex="1">
+          <mxGeometry height="64" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-32" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="RentedFilm" vertex="1">
+          <mxGeometry height="90" width="160" x="1441" y="620" as="geometry">
+            <mxRectangle height="26" width="160" x="230" y="140" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-33" parent="dRSCHxVPpcA_aZxnoG64-32" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value=" + user: Subscriber&#xa; + film: Film&#xa; + rentedAt: LocalDateTime&#xa; + expiresAt: LocalDateTime" vertex="1">
+          <mxGeometry height="64" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-36" parent="WIyWlLk6GJQsqaUBKTNV-1" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="FilmWebApplication" vertex="1">
+          <mxGeometry height="200" width="240" x="1118" y="180" as="geometry">
+            <mxRectangle height="26" width="160" x="230" y="140" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-37" parent="dRSCHxVPpcA_aZxnoG64-36" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value=" - users: List&lt;User&gt;&#xa; - films: List&lt;Film&gt;" vertex="1">
+          <mxGeometry height="44" width="240" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-38" parent="dRSCHxVPpcA_aZxnoG64-36" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-39" parent="dRSCHxVPpcA_aZxnoG64-36" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value=" + signIn(email, password) &#xa; + signUp(username, email, password)&#xa; + listMovies(Comparator&lt;Film&gt; orderBy)&#xa; + buyCredit(email, password, amount)&#xa; + subscribe(email, password)&#xa; + buyFilm(email, password, filmId)&#xa; + rentFilm(email, password, filmId)&#xa; + requestFilm(email, password, filmName)" vertex="1">
+          <mxGeometry height="122" width="240" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-42" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="This is an architectural pattern of a REST controller, users and films should be services which in turn should depend on repositories which send the necessary queries to the database rather than storing everything in-memory. However all that is a lot to express in UML. Also every endpoint that expects email and password just means that it requires auth by whatever means necessary, be that jwt tokens or sessions." vertex="1">
+          <mxGeometry height="140" width="283" x="1101" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-43" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--0" style="endArrow=none;html=1;endSize=12;startArrow=none;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="dRSCHxVPpcA_aZxnoG64-37" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1081" y="460" as="sourcePoint" />
+            <mxPoint x="1241" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-44" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-43" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-45" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-43" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-46" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="dRSCHxVPpcA_aZxnoG64-28" style="endArrow=none;html=1;endSize=12;startArrow=none;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="dRSCHxVPpcA_aZxnoG64-37" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1442.5" y="396" as="sourcePoint" />
+            <mxPoint x="1599.5" y="164" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-47" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-46" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-48" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-46" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-49" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="dRSCHxVPpcA_aZxnoG64-33" style="endArrow=none;html=1;endSize=12;startArrow=none;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="dRSCHxVPpcA_aZxnoG64-21" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1118" y="682" as="sourcePoint" />
+            <mxPoint x="1275" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-50" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-49" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-21" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-51" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-49" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="9" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-52" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="dRSCHxVPpcA_aZxnoG64-29" style="endArrow=none;html=1;endSize=12;startArrow=none;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="zkfFHV4jXpPFQw0GAbJ--1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1460" y="580" as="sourcePoint" />
+            <mxPoint x="1060" y="635" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-53" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-52" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-21" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-54" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-52" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="9" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-55" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="dRSCHxVPpcA_aZxnoG64-32" style="endArrow=none;html=1;endSize=12;startArrow=none;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="dRSCHxVPpcA_aZxnoG64-29" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1470" y="605" as="sourcePoint" />
+            <mxPoint x="1070" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-56" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-55" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-21" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dRSCHxVPpcA_aZxnoG64-57" connectable="0" parent="dRSCHxVPpcA_aZxnoG64-55" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="29" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
