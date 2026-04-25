@@ -1,5 +1,5 @@
 public class App {
     public static void main(String[] args) {
-        new Simulation().run();
+        new Simulation().run(100);
     }
 }

@@ -1,1 +1,1 @@
-public record Person(int targetFloor) { }
+public record Person(int fromFloor, int targetFloor) {}
