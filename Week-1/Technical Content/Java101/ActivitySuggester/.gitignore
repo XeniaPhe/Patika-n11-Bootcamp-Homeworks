@@ -1,0 +1,27 @@
+# --- Java Bytecode ---
+*.class
+*.jar
+*.war
+*.ear
+
+# --- VS Code Settings ---
+.vscode/
+# Exception: keep the launch.json if you want to share debug configs
+# !.vscode/launch.json
+
+# --- Project Metadata ---
+.project
+.classpath
+.settings/
+bin/
+lib/
+
+# --- Build Tool Artifacts (Maven/Gradle) ---
+target/
+build/
+.gradle/
+.nb-gradle/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
