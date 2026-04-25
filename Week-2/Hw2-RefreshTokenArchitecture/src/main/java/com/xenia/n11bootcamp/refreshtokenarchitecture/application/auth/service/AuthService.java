@@ -10,6 +10,7 @@ import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.reque
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.request.RefreshRequest;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.request.RegisterRequest;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.response.AuthResponse;
+import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.response.RefreshResponse;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.exception.UsernameAlreadyExistsException;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.port.TokenService;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.repository.UserRepository;
@@ -37,7 +38,11 @@ public class AuthService {
             .build();
 
         userRepo.save(user);
-        return new AuthResponse(tokenService.issueAccessToken(TokenPayload.fromUser(user)));
+        TokenPayload payload = TokenPayload.fromUser(user);
+        return new AuthResponse(
+            tokenService.issueAccessToken(payload),
+            tokenService.issueRefreshToken(payload)
+        );
     }
 
     public AuthResponse login(LoginRequest request) {
@@ -45,17 +50,19 @@ public class AuthService {
             new UsernamePasswordAuthenticationToken(request.username(), request.password())
         );
 
+        TokenPayload payload = TokenPayload.builder().username(request.username()).build();
         return new AuthResponse(
-            tokenService.issueAccessToken(new TokenPayload(request.username()))
+            tokenService.issueAccessToken(payload),
+            tokenService.issueRefreshToken(payload)
         );
     }
 
-    public AuthResponse refresh(RefreshRequest request) {
+    public RefreshResponse refresh(RefreshRequest request) {
         if (tokenService.isExpired(request.refreshToken())) {
             throw new RuntimeException("Refresh token expired, log-in required.");
         }
 
         TokenPayload payload = tokenService.parse(request.refreshToken());
-        return new AuthResponse(tokenService.issueAccessToken(payload));
+        return new RefreshResponse(tokenService.issueAccessToken(payload));
     }
 }

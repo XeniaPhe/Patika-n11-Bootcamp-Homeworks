@@ -11,6 +11,7 @@ import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.reque
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.request.RefreshRequest;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.request.RegisterRequest;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.response.AuthResponse;
+import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.dto.response.RefreshResponse;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.service.AuthService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -38,8 +39,8 @@ public class AuthController {
 
     @PostMapping("/refresh")
     @Operation(summary = "Refresh access token")
-    public ResponseEntity<AuthResponse> refresh(@RequestBody RefreshRequest request) {
-        AuthResponse response = authService.refresh(request);
+    public ResponseEntity<RefreshResponse> refresh(@RequestBody RefreshRequest request) {
+        RefreshResponse response = authService.refresh(request);
         return ResponseEntity.ok(response);
     }
 }

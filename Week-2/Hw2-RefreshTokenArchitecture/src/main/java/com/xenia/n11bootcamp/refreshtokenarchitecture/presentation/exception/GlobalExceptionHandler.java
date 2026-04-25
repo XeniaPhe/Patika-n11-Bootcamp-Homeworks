@@ -9,20 +9,18 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.exception.TokenExpiredException;
 import com.xenia.n11bootcamp.refreshtokenarchitecture.application.auth.exception.UsernameAlreadyExistsException;
 
-import io.jsonwebtoken.JwtException;
-
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     @ExceptionHandler(UsernameAlreadyExistsException.class)
     public ResponseEntity<String> handleUsernameNotFound(UsernameAlreadyExistsException e) {
         return ResponseEntity.status(HttpStatus.CONFLICT)
-            .body("Registration failed.");
+            .body("Username already exists");
     }
 
     @ExceptionHandler(UsernameNotFoundException.class)
     public ResponseEntity<String> handleUsernameNotFound(UsernameNotFoundException e) {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-            .body("Authentication failed.");
+            .body("Username or password is wrong");
     }
 
     @ExceptionHandler(TokenExpiredException.class)
@@ -30,16 +28,10 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
             .body("Authentication failed: " + e.getMessage());
     }
-
-    @ExceptionHandler(JwtException.class)
-    public ResponseEntity<String> handleJwtException(JwtException e) {
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-            .body("Authentication failed.");
-    }
     
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleEverythingElse(Exception e) {
-        return ResponseEntity.status(HttpStatus.ACCEPTED)
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
             .body("Something went wrong.");
     }
 }

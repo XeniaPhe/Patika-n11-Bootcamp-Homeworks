@@ -3,6 +3,7 @@ package com.xenia.n11bootcamp.refreshtokenarchitecture.infrastracture.security.j
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,16 +24,13 @@ import jakarta.servlet.http.HttpServletResponse;
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final JwtService jwtService;
     private final UserDetailsService userDetailsService;
-    private final HandlerExceptionResolver exceptionResolver;
 
     public JwtAuthenticationFilter(
         JwtService jwtService,
-        UserDetailsService userDetailsService,
-        @Qualifier("handlerExceptionResolver") HandlerExceptionResolver exceptionResolver) {
+        UserDetailsService userDetailsService) {
 
         this.jwtService = jwtService;
         this.userDetailsService = userDetailsService;
-        this.exceptionResolver = exceptionResolver;
     }
 
     @Override
@@ -57,7 +55,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             final String username = jwtService.parse(jwt).username();
 
             if (jwtService.isExpired(jwt)) {
-                throw new TokenExpiredException("Access token expired, refresh the token.");
+                throw new TokenExpiredException("Token expired");
             }
 
             UserDetails userPrincipal = userDetailsService.loadUserByUsername(username);
@@ -70,8 +68,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             SecurityContextHolder.getContext().setAuthentication(authToken);
             filterChain.doFilter(request, response);
+        } catch (TokenExpiredException e) {
+            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+            response.getWriter().write("Token expired, you need to refresh");
         } catch (Exception e) {
-            exceptionResolver.resolveException(request, response, null, e);
+            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+            response.getWriter().write("Authentication failed");
         }
     }
 }
